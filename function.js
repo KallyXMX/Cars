@@ -1,87 +1,91 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 
-// Your specific Firebase configuration (Already filled for you!)
 const firebaseConfig = {
   apiKey: "AIzaSyCwTyKZQs8aI94Ez1Z8sXdcm3qT1Q51CgI",
   authDomain: "kano-auto-hub.firebaseapp.com",
   projectId: "kano-auto-hub",
   storageBucket: "kano-auto-hub.firebasestorage.app",
   messagingSenderId: "461639442333",
-  appId: "1:461639442333:web:8224be6fe4542f1d845974",
-  measurementId: "G-9G0FYLCZFK"
+  appId: "1:461639442333:web:8224be6fe4542f1d845974"
 };
-
-const MY_WHATSAPP = "2348000000000"; // Change this to your real number later!
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const storage = getStorage(app);
-const appId = "kano-autohub-v1"; 
 
-let isAdmin = false;
-
-// UI Logic
-const loginModal = document.getElementById('loginModal');
-const adminPanel = document.getElementById('adminPanel');
-
-document.getElementById('adminTrigger').onclick = () => loginModal.style.display = 'flex';
-document.getElementById('closeLogin').onclick = () => loginModal.style.display = 'none';
-
-document.getElementById('btnLogin').onclick = async () => {
-    const e = document.getElementById('email').value;
-    const p = document.getElementById('pass').value;
-    try {
-        await signInWithEmailAndPassword(auth, e, p);
-        loginModal.style.display = 'none';
-    } catch (err) { alert("Login failed. Check your Firebase Users tab."); }
-};
-
-document.getElementById('btnLogout').onclick = () => signOut(auth);
-
+// Check Login Status
 onAuthStateChanged(auth, user => {
-    isAdmin = !!user;
-    adminPanel.classList.toggle('hidden', !isAdmin);
+    const adminPanel = document.getElementById('adminPanel');
+    if (adminPanel) {
+        if (user) {
+            adminPanel.classList.remove('hidden');
+        } else {
+            adminPanel.classList.add('hidden');
+        }
+    }
     renderInventory();
 });
 
+// Login Logic
+document.getElementById('btnLogin').onclick = async () => {
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+    try {
+        await signInWithEmailAndPassword(auth, email, pass);
+        document.getElementById('loginModal').style.display = 'none';
+        alert("Welcome back, Boss!");
+    } catch (e) {
+        alert("Login Failed: Check your email and password.");
+    }
+};
+
+// Logout Logic
+document.getElementById('btnLogout').onclick = () => signOut(auth);
+
+// Add Car (Using Image Link)
+document.getElementById('btnUpload').onclick = async () => {
+    const name = document.getElementById('carTitle').value;
+    const price = document.getElementById('carPrice').value;
+    const imgUrl = prompt("Paste the Image Link (URL) of the car:");
+
+    if (name && price && imgUrl) {
+        await addDoc(collection(db, "cars"), {
+            name: name,
+            price: price,
+            img: imgUrl,
+            time: Date.now()
+        });
+        alert("Car added to Kano Auto Hub!");
+    }
+};
+
+// Show Cars on Page
 function renderInventory() {
-    const q = query(collection(db, 'cars'), orderBy('time', 'desc'));
-    onSnapshot(q, s => {
+    const q = query(collection(db, "cars"), orderBy("time", "desc"));
+    onSnapshot(q, (snapshot) => {
         const grid = document.getElementById('carGrid');
         grid.innerHTML = "";
-        s.forEach(snap => {
-            const car = snap.data();
-            const id = snap.id;
-            const div = document.createElement('div');
-            div.className = 'car-card';
-            div.innerHTML = `
-                ${isAdmin ? `<button class="del-btn" onclick="removeCar('${id}')">DELETE</button>` : ''}
-                <div class="img-box"><img src="${car.img}"></div>
-                <div class="details">
-                    <h3>${car.name}</h3>
-                    <p>Price: ₦${car.price}</p>
-                    <a href="https://wa.me/${MY_WHATSAPP}" class="btn-wa">WhatsApp</a>
-                </div>`;
-            grid.appendChild(div);
+        snapshot.forEach(docSnap => {
+            const car = docSnap.data();
+            const id = docSnap.id;
+            const card = document.createElement('div');
+            card.className = 'car-card';
+            card.innerHTML = `
+                <img src="${car.img}" style="width:100%; border-radius:8px;">
+                <h3>${car.name}</h3>
+                <p>₦${Number(car.price).toLocaleString()}</p>
+                <a href="https://wa.me/2348000000000" class="btn-wa">WhatsApp Dealer</a>
+                ${auth.currentUser ? `<button onclick="deleteCar('${id}')" style="background:red; color:white; border:none; padding:5px; margin-top:10px; cursor:pointer; width:100%;">DELETE</button>` : ''}
+            `;
+            grid.appendChild(card);
         });
     });
 }
 
-document.getElementById('btnUpload').onclick = async () => {
-    const name = document.getElementById('carTitle').value;
-    const price = document.getElementById('carPrice').value;
-    const file = document.getElementById('carFile').files[0];
-    if(!file) return alert("Select a photo");
-    
-    const sRef = ref(storage, `cars/${Date.now()}`);
-    await uploadBytes(sRef, file);
-    const img = await getDownloadURL(sRef);
-    await addDoc(collection(db, 'cars'), { name, price, img, time: Date.now() });
-    alert("Uploaded!");
+window.deleteCar = async (id) => {
+    if (confirm("Remove this car?")) {
+        await deleteDoc(doc(db, "cars", id));
+    }
 };
-
-window.removeCar = async (id) => { if(confirm("Delete?")) await deleteDoc(doc(db, 'cars', id)); };
