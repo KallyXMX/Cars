@@ -1,91 +1,79 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCwTyKZQs8aI94Ez1Z8sXdcm3qT1Q51CgI",
-  authDomain: "kano-auto-hub.firebaseapp.com",
-  projectId: "kano-auto-hub",
-  storageBucket: "kano-auto-hub.firebasestorage.app",
-  messagingSenderId: "461639442333",
-  appId: "1:461639442333:web:8224be6fe4542f1d845974"
-};
+const fmt = new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN', maximumFractionDigits: 0 });
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-// Check Login Status
-onAuthStateChanged(auth, user => {
-    const adminPanel = document.getElementById('adminPanel');
-    if (adminPanel) {
-        if (user) {
-            adminPanel.classList.remove('hidden');
-        } else {
-            adminPanel.classList.add('hidden');
-        }
-    }
-    renderInventory();
+// Parse car data from carsData array
+const inventory = carsData.map(car => {
+    const nameMatch = car.car_name.match(/^(\d{4})\s+(.+?)\s+(.+)$/);
+    const priceMatch = car.whatsapp_message.match(/₦([\d,]+)/);
+    
+    const year = nameMatch ? parseInt(nameMatch[1]) : 2010;
+    const brand = nameMatch ? nameMatch[2] : "Toyota";
+    const model = nameMatch ? nameMatch[3] : "Car";
+    const price = priceMatch ? parseInt(priceMatch[1].replace(/,/g, '')) : 0;
+    
+    return {
+        id: car.id,
+        year,
+        brand,
+        model,
+        price,
+        condition: year >= 2015 ? "Tokunbo" : "Nigerian Used",
+        image: car.car_link_image
+    };
 });
 
-// Login Logic
-document.getElementById('btnLogin').onclick = async () => {
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('pass').value;
-    try {
-        await signInWithEmailAndPassword(auth, email, pass);
-        document.getElementById('loginModal').style.display = 'none';
-        alert("Welcome back, Boss!");
-    } catch (e) {
-        alert("Login Failed: Check your email and password.");
-    }
-};
-
-// Logout Logic
-document.getElementById('btnLogout').onclick = () => signOut(auth);
-
-// Add Car (Using Image Link)
-document.getElementById('btnUpload').onclick = async () => {
-    const name = document.getElementById('carTitle').value;
-    const price = document.getElementById('carPrice').value;
-    const imgUrl = prompt("Paste the Image Link (URL) of the car:");
-
-    if (name && price && imgUrl) {
-        await addDoc(collection(db, "cars"), {
-            name: name,
-            price: price,
-            img: imgUrl,
-            time: Date.now()
-        });
-        alert("Car added to Kano Auto Hub!");
-    }
-};
-
-// Show Cars on Page
-function renderInventory() {
-    const q = query(collection(db, "cars"), orderBy("time", "desc"));
-    onSnapshot(q, (snapshot) => {
-        const grid = document.getElementById('carGrid');
-        grid.innerHTML = "";
-        snapshot.forEach(docSnap => {
-            const car = docSnap.data();
-            const id = docSnap.id;
-            const card = document.createElement('div');
-            card.className = 'car-card';
-            card.innerHTML = `
-                <img src="${car.img}" style="width:100%; border-radius:8px;">
-                <h3>${car.name}</h3>
-                <p>₦${Number(car.price).toLocaleString()}</p>
-                <a href="https://wa.me/2348000000000" class="btn-wa">WhatsApp Dealer</a>
-                ${auth.currentUser ? `<button onclick="deleteCar('${id}')" style="background:red; color:white; border:none; padding:5px; margin-top:10px; cursor:pointer; width:100%;">DELETE</button>` : ''}
-            `;
-            grid.appendChild(card);
-        });
+function show(cars) {
+    const grid = document.getElementById('carGrid');
+    grid.innerHTML = cars.length === 0 ? `<div style="grid-column: 1/-1; text-align: center; padding: 50px;"><h3>No cars found</h3></div>` : '';
+    cars.forEach(car => {
+        const card = document.createElement('div');
+        card.className = 'car-card';
+        card.innerHTML = `
+            <div class="car-img-box"><span class="condition-tag">${car.condition}</span><img src="${car.image}" alt="${car.brand} ${car.model}" loading="lazy"></div>
+            <div class="car-details"><h3>${car.year} ${car.brand} ${car.model}</h3>
+            <div class="car-meta"><span>Automatic</span><span>Kano Stock</span></div>
+            <span class="car-price">${fmt.format(car.price)}</span>
+            <div class="card-actions">
+                <a href="https://wa.me/2348000000000?text=Hello, I saw the ${car.year} ${car.brand} ${car.model} for ${fmt.format(car.price)} on your website. Is it still available?" target="_blank" class="wa-btn">WhatsApp Us</a>
+                <a href="#" class="details-btn" data-id="${car.id}">View Details</a></div></div>`;
+        grid.appendChild(card);
     });
+    document.getElementById('carCounter').innerText = `Showing ${cars.length} Cars in Kano`;
 }
 
-window.deleteCar = async (id) => {
-    if (confirm("Remove this car?")) {
-        await deleteDoc(doc(db, "cars", id));
-    }
-};
+function filter() {
+    const term = document.getElementById('carSearch').value.toLowerCase();
+    const brand = document.getElementById('brandFilter').value;
+    show(inventory.filter(car => `${car.brand} ${car.model} ${car.year}`.toLowerCase().includes(term) && (brand === "all" || car.brand === brand)));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    show(inventory);
+    document.getElementById('carSearch').addEventListener('input', filter);
+    document.getElementById('brandFilter').addEventListener('change', filter);
+    
+    const modal = document.getElementById('detailsModal');
+    document.getElementById('carGrid').addEventListener('click', e => {
+        const btn = e.target.closest('.details-btn');
+        if (btn) {
+            const car = inventory.find(c => c.id === parseInt(btn.dataset.id));
+            if (car) {
+                document.getElementById('modalTitle').innerText = `${car.year} ${car.brand} ${car.model}`;
+                document.getElementById('modalMeta').innerText = `Stock • Automatic • ${car.year}`;
+                document.getElementById('modalPrice').innerText = fmt.format(car.price);
+                document.getElementById('modalCondition').innerText = car.condition;
+                modal.querySelector('.modal-image img').src = car.image;
+                document.getElementById('modalWhatsapp').href = `https://wa.me/2348000000000?text=Hi, I'm interested in the ${car.year} ${car.brand} ${car.model} listed on your site.`;
+                modal.classList.add('open');
+            }
+            e.preventDefault();
+        }
+    });
+    
+    modal.addEventListener('click', e => {
+        if (e.target.classList.contains('details-modal-backdrop') || e.target.classList.contains('modal-close')) modal.classList.remove('open');
+    });
+    
+    document.addEventListener('keydown', e => e.key === 'Escape' && modal.classList.remove('open'));
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => document.querySelector('.nav-links').classList.toggle('open'));
+});
