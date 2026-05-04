@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kano Auto Hub | Admin Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center;
+            font-family: 'Inter', sans-serif; color: white;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+
+        .glass-card {
+            width: 100%; max-width: 380px; padding: 50px 40px; text-align: center;
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 35px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+        }
+
+        .logo { font-family: 'Oswald'; font-size: 2rem; letter-spacing: 4px; margin-bottom: 5px; text-transform: uppercase; }
+        .logo span { color: #2e7d32; }
+        .tag { font-size: 0.7rem; letter-spacing: 3px; color: rgba(255,255,255,0.4); margin-bottom: 40px; }
+
+        input {
+            width: 100%; padding: 16px; margin-bottom: 15px; border-radius: 15px;
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            color: white; font-size: 1rem; outline: none; transition: 0.3s; box-sizing: border-box;
+        }
+
+        input:focus { border-color: #2e7d32; background: rgba(255,255,255,0.1); }
+
+        button {
+            width: 100%; padding: 16px; background: #2e7d32; border: none; border-radius: 15px;
+            color: white; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; transition: 0.3s; margin-top: 10px;
+        }
+
+        button:hover { background: #1b5e20; transform: translateY(-2px); }
+        
+        #msg { font-size: 0.8rem; margin-bottom: 15px; display: none; padding: 10px; border-radius: 10px; }
+        .err { background: rgba(255, 82, 82, 0.1); color: #ff5252; }
+        .back { display: block; margin-top: 30px; font-size: 0.7rem; color: rgba(255,255,255,0.3); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <div class="logo">KANO<span>AUTO</span>HUB</div>
+    <div class="tag">AUTHORIZED ACCESS ONLY</div>
+    
+    <div id="msg" class="err">Invalid Credentials</div>
+    
+    <input type="email" id="email" placeholder="ADMIN EMAIL">
+    <input type="password" id="pass" placeholder="PASSWORD">
+    
+    <button onclick="handleLogin()">ENTER SHOWROOM</button>
+    
+    <a href="index.html" class="back">← Back to Site</a>
+</div>
+
+<script>
+    function handleLogin() {
+        const email = document.getElementById('email').value;
+        const pass = document.getElementById('pass').value;
+        const msg = document.getElementById('msg');
+
+        // The logins, we can change it later or use firebase.
+        if (email.toLowerCase() === "admin@kanoautohub.com" && pass === "Boss1234") {
+            sessionStorage.setItem('isSuperAdmin', 'true');
+            window.location.href = "index.html";
+        } else {
+            msg.style.display = 'block';
+            document.getElementById('pass').value = "";
+        }
+    }
+</script>
+
+</body>
+</html>
