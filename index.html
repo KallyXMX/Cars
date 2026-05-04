@@ -1,0 +1,1400 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kano Auto Hub — Inventory</title>
+    <meta name="description" content="Tokunbo and clean Nigerian-used vehicles in Kano. Browse, filter and contact via WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="top-bar">
+        <span>📍 12 Zaria Road, Kano, Nigeria</span>
+        <span>📞 +234 800 KANO AUTO</span>
+    </div>
+    <nav class="navbar">
+        <div class="logo">KANO<span>AUTO</span>HUB</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#inventory">Inventory</a></li>
+            <li><a href="#contact">Sell / Test Drive</a></li>
+            <li><a href="https://wa.me/2348000000000" class="whatsapp-nav">WhatsApp Us</a></li>
+            <li><a href="login.html">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>DRIVE WITH PRIDE</h1>
+            <p>The largest collection of Foreign and clean Nigerian-used vehicles in Kano.</p>
+            <div class="hero-btns">
+                <a href="#inventory" class="btn-primary">Browse 50+ Cars</a>
+                <a href="#contact" class="btn-secondary">Test Drive</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="filter-section">
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="carSearch" placeholder="Search (e.g., Toyota Camry, 2014, Benz)...">
+            <select id="brandFilter">
+                <option value="all">All Brands</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+            </select>
+        </div>
+        <p id="carCounter">Showing 50 Cars in Kano</p>
+    </div>
+</section>
+
+<section id="inventory" class="inventory-section">
+    <div class="container">
+        <div class="car-grid">
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2011 Toyota Corolla">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2011 Toyota Corolla</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦15,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202011%20Toyota%20Corolla%20for%20%E2%82%A615%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2010 Mercedes-Benz C300">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2010 Mercedes-Benz C300</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦22,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202010%20Mercedes-Benz%20C300%20for%20%E2%82%A622%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2012 Toyota RAV4">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2012 Toyota RAV4</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦29,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202012%20Toyota%20RAV4%20for%20%E2%82%A629%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2013 Mercedes-Benz CLA 250">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2013 Mercedes-Benz CLA 250</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦27,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202013%20Mercedes-Benz%20CLA%20250%20for%20%E2%82%A627%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2018 Mercedes-Benz E350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2018 Mercedes-Benz E350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦37,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202018%20Mercedes-Benz%20E350%20for%20%E2%82%A637%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2015 Honda Accord (Evil Spirit)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2015 Honda Accord (Evil Spirit)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦23,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202015%20Honda%20Accord%20%28Evil%20Spirit%29%20for%20%E2%82%A623%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2011 Honda Pilot">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2011 Honda Pilot</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦19,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202011%20Honda%20Pilot%20for%20%E2%82%A619%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2020 Mercedes-Benz ML 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2020 Mercedes-Benz ML 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦37,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202020%20Mercedes-Benz%20ML%20350%20for%20%E2%82%A637%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2021 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2021 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦20,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202021%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A620%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2014 Mercedes-Benz GLK 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2014 Mercedes-Benz GLK 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦34,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202014%20Mercedes-Benz%20GLK%20350%20for%20%E2%82%A634%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2005 Honda Pilot">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2005 Honda Pilot</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦31,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202005%20Honda%20Pilot%20for%20%E2%82%A631%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2005 Mercedes-Benz C300">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2005 Mercedes-Benz C300</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦20,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202005%20Mercedes-Benz%20C300%20for%20%E2%82%A620%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2012 Mercedes-Benz CLA 250">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2012 Mercedes-Benz CLA 250</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦10,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202012%20Mercedes-Benz%20CLA%20250%20for%20%E2%82%A610%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2017 Honda Pilot">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2017 Honda Pilot</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦31,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202017%20Honda%20Pilot%20for%20%E2%82%A631%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2009 Honda Accord (Evil Spirit)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2009 Honda Accord (Evil Spirit)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦21,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202009%20Honda%20Accord%20%28Evil%20Spirit%29%20for%20%E2%82%A621%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2021 Mercedes-Benz ML 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2021 Mercedes-Benz ML 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦16,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202021%20Mercedes-Benz%20ML%20350%20for%20%E2%82%A616%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2013 Mercedes-Benz ML 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2013 Mercedes-Benz ML 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦35,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202013%20Mercedes-Benz%20ML%20350%20for%20%E2%82%A635%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2015 Mercedes-Benz E350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2015 Mercedes-Benz E350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦22,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202015%20Mercedes-Benz%20E350%20for%20%E2%82%A622%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2016 Mercedes-Benz C300">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2016 Mercedes-Benz C300</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦33,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202016%20Mercedes-Benz%20C300%20for%20%E2%82%A633%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2012 Honda CR-V">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2012 Honda CR-V</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦8,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202012%20Honda%20CR-V%20for%20%E2%82%A68%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2013 Toyota Sienna">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2013 Toyota Sienna</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦19,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202013%20Toyota%20Sienna%20for%20%E2%82%A619%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2006 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2006 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦5,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202006%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A65%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2018 Toyota Highlander">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2018 Toyota Highlander</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦9,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202018%20Toyota%20Highlander%20for%20%E2%82%A69%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2020 Honda CR-V">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2020 Honda CR-V</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦24,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202020%20Honda%20CR-V%20for%20%E2%82%A624%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2015 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2015 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦23,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202015%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A623%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2019 Honda Accord (Evil Spirit)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2019 Honda Accord (Evil Spirit)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦31,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202019%20Honda%20Accord%20%28Evil%20Spirit%29%20for%20%E2%82%A631%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2015 Mercedes-Benz E350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2015 Mercedes-Benz E350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦11,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202015%20Mercedes-Benz%20E350%20for%20%E2%82%A611%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2013 Toyota Camry (Muscle)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2013 Toyota Camry (Muscle)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦9,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202013%20Toyota%20Camry%20%28Muscle%29%20for%20%E2%82%A69%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2022 Honda Pilot">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2022 Honda Pilot</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦21,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202022%20Honda%20Pilot%20for%20%E2%82%A621%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2007 Toyota Camry (Spider)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2007 Toyota Camry (Spider)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦31,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202007%20Toyota%20Camry%20%28Spider%29%20for%20%E2%82%A631%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2021 Mercedes-Benz GLK 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2021 Mercedes-Benz GLK 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦30,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202021%20Mercedes-Benz%20GLK%20350%20for%20%E2%82%A630%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2005 Mercedes-Benz GLK 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2005 Mercedes-Benz GLK 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦25,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202005%20Mercedes-Benz%20GLK%20350%20for%20%E2%82%A625%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2017 Mercedes-Benz ML 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2017 Mercedes-Benz ML 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦24,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202017%20Mercedes-Benz%20ML%20350%20for%20%E2%82%A624%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2008 Honda Accord (Evil Spirit)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2008 Honda Accord (Evil Spirit)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦31,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202008%20Honda%20Accord%20%28Evil%20Spirit%29%20for%20%E2%82%A631%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2022 Honda Civic">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2022 Honda Civic</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦16,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202022%20Honda%20Civic%20for%20%E2%82%A616%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2011 Honda Civic">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2011 Honda Civic</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦25,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202011%20Honda%20Civic%20for%20%E2%82%A625%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2006 Honda Accord (Evil Spirit)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2006 Honda Accord (Evil Spirit)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦6,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202006%20Honda%20Accord%20%28Evil%20Spirit%29%20for%20%E2%82%A66%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2011 Toyota Corolla">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2011 Toyota Corolla</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦7,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202011%20Toyota%20Corolla%20for%20%E2%82%A67%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2008 Toyota Hilux">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2008 Toyota Hilux</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦20,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202008%20Toyota%20Hilux%20for%20%E2%82%A620%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2017 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2017 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦29,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202017%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A629%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2016 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2016 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦27,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202016%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A627%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2018 Toyota Corolla">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2018 Toyota Corolla</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦19,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202018%20Toyota%20Corolla%20for%20%E2%82%A619%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2008 Mercedes-Benz C300">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2008 Mercedes-Benz C300</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦35,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202008%20Mercedes-Benz%20C300%20for%20%E2%82%A635%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2008 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2008 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦22,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202008%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A622%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2010 Mercedes-Benz ML 350">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2010 Mercedes-Benz ML 350</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦9,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202010%20Mercedes-Benz%20ML%20350%20for%20%E2%82%A69%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2007 Honda Accord (Discussion Continues)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2007 Honda Accord (Discussion Continues)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦12,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202007%20Honda%20Accord%20%28Discussion%20Continues%29%20for%20%E2%82%A612%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2012 Toyota Camry (Muscle)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2012 Toyota Camry (Muscle)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦20,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202012%20Toyota%20Camry%20%28Muscle%29%20for%20%E2%82%A620%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80" alt="2021 Honda CR-V">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2021 Honda CR-V</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦22,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202021%20Honda%20CR-V%20for%20%E2%82%A622%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="2006 Mercedes-Benz CLA 250">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2006 Mercedes-Benz CLA 250</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦15,000,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202006%20Mercedes-Benz%20CLA%20250%20for%20%E2%82%A615%2C000%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80" alt="2013 Toyota Camry (Muscle)">
+                    <span class="condition-tag">Foreign Used</span>
+                </div>
+                <div class="car-details">
+                    <h3>2013 Toyota Camry (Muscle)</h3>
+                    <div class="car-meta">
+                        <span>Automatic</span>
+                        <span>Kano</span>
+                    </div>
+                    <span class="car-price">₦12,500,000</span>
+                    <div class="card-actions">
+                        <a href="#" class="details-btn">View Details</a>
+                        <a href="https://wa.me/2348000000000?text=Hello%2C%20I%20saw%20the%202013%20Toyota%20Camry%20%28Muscle%29%20for%20%E2%82%A612%2C500%2C000%20on%20your%20website.%20Is%20it%20still%20available%3F" class="wa-btn" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container" style="padding:40px 0 80px;">
+    <h2 style="margin-bottom:12px;">Book a Test Drive</h2>
+    <p style="color:var(--text-muted); margin-bottom:18px;">Call or WhatsApp us to schedule a test drive. We'll confirm availability promptly.</p>
+    <a href="https://wa.me/2348000000000" class="btn-primary">WhatsApp to Book</a>
+</section>
+
+<div id="detailsModal" class="details-modal" aria-hidden="true">
+    <div class="details-modal-backdrop"></div>
+    <div class="details-modal-panel" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="Close details">✕</button>
+        <div class="modal-body">
+            <div class="modal-gallery-container">
+                <div class="modal-gallery">
+                    <img id="carousel-img" src="" alt="Car image">
+                    <button class="gallery-nav-btn gallery-prev" onclick="prevPhoto()" aria-label="Previous photo">❮</button>
+                    <button class="gallery-nav-btn gallery-next" onclick="nextPhoto()" aria-label="Next photo">❯</button>
+                    <div class="gallery-counter"><span id="current-photo">1</span> / <span id="total-photos">1</span></div>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalMeta" class="car-meta"></p>
+                <p id="modalPrice" class="car-price"></p>
+                <p id="modalCondition" style="font-weight:600; margin-bottom:12px;"></p>
+                <a id="modalWhatsapp" class="wa-btn" target="_blank">Contact via WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="admin-modal">
+    <div class="admin-modal-backdrop" onclick="document.getElementById('admin-modal').style.display='none'"></div>
+    <div class="admin-modal-panel">
+        <h3>Add/Edit Car</h3>
+        <input id="car-name" placeholder="Car Name" type="text">
+        <input id="car-price" placeholder="Price (number)" type="number">
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: 600;">Upload Images (up to 5)</label>
+            <div id="image-inputs" style="display: flex; flex-direction: column; gap: 8px;"></div>
+        </div>
+        <button onclick="saveCar()">Save</button>
+        <button onclick="document.getElementById('admin-modal').style.display='none'">Cancel</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>KANO AUTO HUB</h3>
+            <p>Leading the way in quality automotive sales across Northern Nigeria.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <p><a href="#inventory">Inventory</a></p>
+            <p><a href="#contact">Contact / Test Drive</a></p>
+            <p>Import Services</p>
+        </div>
+        <div class="footer-col">
+            <h4>Working Hours</h4>
+            <p>Mon - Fri: 8am - 6pm</p>
+            <p>Sat: 9am - 4pm</p>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2026 Kano Auto Hub. All rights reserved.
+    </div>
+</footer>
+
+<script>
+let carsData = [
+  {"id": 1, "car_name": "2011 Toyota Corolla", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2011 Toyota Corolla for ₦15,500,000 on your website. Is it still available?"},
+  {"id": 2, "car_name": "2010 Mercedes-Benz C300", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2010 Mercedes-Benz C300 for ₦22,000,000 on your website. Is it still available?"},
+  {"id": 3, "car_name": "2012 Toyota RAV4", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2012 Toyota RAV4 for ₦29,500,000 on your website. Is it still available?"},
+  {"id": 4, "car_name": "2013 Mercedes-Benz CLA 250", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2013 Mercedes-Benz CLA 250 for ₦27,000,000 on your website. Is it still available?"},
+  {"id": 5, "car_name": "2018 Mercedes-Benz E350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2018 Mercedes-Benz E350 for ₦37,000,000 on your website. Is it still available?"},
+  {"id": 6, "car_name": "2015 Honda Accord (Evil Spirit)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2015 Honda Accord (Evil Spirit) for ₦23,500,000 on your website. Is it still available?"},
+  {"id": 7, "car_name": "2011 Honda Pilot", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2011 Honda Pilot for ₦19,500,000 on your website. Is it still available?"},
+  {"id": 8, "car_name": "2020 Mercedes-Benz ML 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2020 Mercedes-Benz ML 350 for ₦37,000,000 on your website. Is it still available?"},
+  {"id": 9, "car_name": "2021 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2021 Honda Accord (Discussion Continues) for ₦20,500,000 on your website. Is it still available?"},
+  {"id": 10, "car_name": "2014 Mercedes-Benz GLK 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2014 Mercedes-Benz GLK 350 for ₦34,000,000 on your website. Is it still available?"},
+  {"id": 11, "car_name": "2005 Honda Pilot", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2005 Honda Pilot for ₦31,500,000 on your website. Is it still available?"},
+  {"id": 12, "car_name": "2005 Mercedes-Benz C300", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2005 Mercedes-Benz C300 for ₦20,000,000 on your website. Is it still available?"},
+  {"id": 13, "car_name": "2012 Mercedes-Benz CLA 250", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2012 Mercedes-Benz CLA 250 for ₦10,000,000 on your website. Is it still available?"},
+  {"id": 14, "car_name": "2017 Honda Pilot", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2017 Honda Pilot for ₦31,500,000 on your website. Is it still available?"},
+  {"id": 15, "car_name": "2009 Honda Accord (Evil Spirit)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2009 Honda Accord (Evil Spirit) for ₦21,500,000 on your website. Is it still available?"},
+  {"id": 16, "car_name": "2021 Mercedes-Benz ML 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2021 Mercedes-Benz ML 350 for ₦16,000,000 on your website. Is it still available?"},
+  {"id": 17, "car_name": "2013 Mercedes-Benz ML 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2013 Mercedes-Benz ML 350 for ₦35,000,000 on your website. Is it still available?"},
+  {"id": 18, "car_name": "2015 Mercedes-Benz E350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2015 Mercedes-Benz E350 for ₦22,000,000 on your website. Is it still available?"},
+  {"id": 19, "car_name": "2016 Mercedes-Benz C300", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2016 Mercedes-Benz C300 for ₦33,000,000 on your website. Is it still available?"},
+  {"id": 20, "car_name": "2012 Honda CR-V", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2012 Honda CR-V for ₦8,500,000 on your website. Is it still available?"},
+  {"id": 21, "car_name": "2013 Toyota Sienna", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2013 Toyota Sienna for ₦19,500,000 on your website. Is it still available?"},
+  {"id": 22, "car_name": "2006 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2006 Honda Accord (Discussion Continues) for ₦5,500,000 on your website. Is it still available?"},
+  {"id": 23, "car_name": "2018 Toyota Highlander", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2018 Toyota Highlander for ₦9,500,000 on your website. Is it still available?"},
+  {"id": 24, "car_name": "2020 Honda CR-V", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2020 Honda CR-V for ₦24,500,000 on your website. Is it still available?"},
+  {"id": 25, "car_name": "2015 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2015 Honda Accord (Discussion Continues) for ₦23,500,000 on your website. Is it still available?"},
+  {"id": 26, "car_name": "2019 Honda Accord (Evil Spirit)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2019 Honda Accord (Evil Spirit) for ₦31,500,000 on your website. Is it still available?"},
+  {"id": 27, "car_name": "2015 Mercedes-Benz E350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2015 Mercedes-Benz E350 for ₦11,000,000 on your website. Is it still available?"},
+  {"id": 28, "car_name": "2013 Toyota Camry (Muscle)", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2013 Toyota Camry (Muscle) for ₦9,500,000 on your website. Is it still available?"},
+  {"id": 29, "car_name": "2022 Honda Pilot", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2022 Honda Pilot for ₦21,500,000 on your website. Is it still available?"},
+  {"id": 30, "car_name": "2007 Toyota Camry (Spider)", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2007 Toyota Camry (Spider) for ₦31,500,000 on your website. Is it still available?"},
+  {"id": 31, "car_name": "2021 Mercedes-Benz GLK 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2021 Mercedes-Benz GLK 350 for ₦30,000,000 on your website. Is it still available?"},
+  {"id": 32, "car_name": "2005 Mercedes-Benz GLK 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2005 Mercedes-Benz GLK 350 for ₦25,000,000 on your website. Is it still available?"},
+  {"id": 33, "car_name": "2017 Mercedes-Benz ML 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2017 Mercedes-Benz ML 350 for ₦24,000,000 on your website. Is it still available?"},
+  {"id": 34, "car_name": "2008 Honda Accord (Evil Spirit)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2008 Honda Accord (Evil Spirit) for ₦31,500,000 on your website. Is it still available?"},
+  {"id": 35, "car_name": "2022 Honda Civic", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2022 Honda Civic for ₦16,500,000 on your website. Is it still available?"},
+  {"id": 36, "car_name": "2011 Honda Civic", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2011 Honda Civic for ₦25,500,000 on your website. Is it still available?"},
+  {"id": 37, "car_name": "2006 Honda Accord (Evil Spirit)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2006 Honda Accord (Evil Spirit) for ₦6,500,000 on your website. Is it still available?"},
+  {"id": 38, "car_name": "2011 Toyota Corolla", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2011 Toyota Corolla for ₦7,500,000 on your website. Is it still available?"},
+  {"id": 39, "car_name": "2008 Toyota Hilux", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2008 Toyota Hilux for ₦20,500,000 on your website. Is it still available?"},
+  {"id": 40, "car_name": "2017 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2017 Honda Accord (Discussion Continues) for ₦29,500,000 on your website. Is it still available?"},
+  {"id": 41, "car_name": "2016 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2016 Honda Accord (Discussion Continues) for ₦27,500,000 on your website. Is it still available?"},
+  {"id": 42, "car_name": "2018 Toyota Corolla", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2018 Toyota Corolla for ₦19,500,000 on your website. Is it still available?"},
+  {"id": 43, "car_name": "2008 Mercedes-Benz C300", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2008 Mercedes-Benz C300 for ₦35,000,000 on your website. Is it still available?"},
+  {"id": 44, "car_name": "2008 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2008 Honda Accord (Discussion Continues) for ₦22,500,000 on your website. Is it still available?"},
+  {"id": 45, "car_name": "2010 Mercedes-Benz ML 350", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2010 Mercedes-Benz ML 350 for ₦9,000,000 on your website. Is it still available?"},
+  {"id": 46, "car_name": "2007 Honda Accord (Discussion Continues)", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2007 Honda Accord (Discussion Continues) for ₦12,500,000 on your website. Is it still available?"},
+  {"id": 47, "car_name": "2012 Toyota Camry (Muscle)", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2012 Toyota Camry (Muscle) for ₦20,500,000 on your website. Is it still available?"},
+  {"id": 48, "car_name": "2021 Honda CR-V", "car_link_image": "https://images.unsplash.com/photo-1599912027806-cfec9f5944b6?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2021 Honda CR-V for ₦22,500,000 on your website. Is it still available?"},
+  {"id": 49, "car_name": "2006 Mercedes-Benz CLA 250", "car_link_image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2006 Mercedes-Benz CLA 250 for ₦15,000,000 on your website. Is it still available?"},
+  {"id": 50, "car_name": "2013 Toyota Camry (Muscle)", "car_link_image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&w=800&q=80", "whatsapp_message": "Hello, I saw the 2013 Toyota Camry (Muscle) for ₦12,500,000 on your website. Is it still available?"}
+];
+let isSuperAdmin = sessionStorage.getItem('isSuperAdmin') === 'true';
+console.log('isSuperAdmin:', isSuperAdmin);
+let currentEditingId = null;
+let currentCarouselImageIndex = 0;
+let currentCarouselImages = [];
+
+// Change or you can add price from whatsapp message
+carsData.forEach(car => {
+    const match = car.whatsapp_message.match(/₦([\d,]+) /);
+    if (match) {
+        car.price = parseInt(match[1].replace(/,/g, ''));
+    }
+    // Initialize images array if not present
+    if (!car.images) {
+        car.images = [car.car_link_image];
+    }
+});
+
+// Load from localStorage
+if (localStorage.getItem('carsData')) {
+    carsData = JSON.parse(localStorage.getItem('carsData'));
+}
+
+function renderCarGrid() {
+    const grid = document.querySelector('.car-grid');
+    grid.innerHTML = '';
+    carsData.forEach(car => {
+        const card = createCarCard(car);
+        grid.appendChild(card);
+    });
+    attachEventListeners();
+}
+
+function createCarCard(car) {
+    const card = document.createElement('div');
+    card.className = 'car-card';
+    card.dataset.carId = car.id;
+    const mainImage = car.images && car.images[0] ? car.images[0] : car.car_link_image;
+    card.innerHTML = `
+        <div class="car-img-box">
+            <img src="${mainImage}" alt="${car.car_name}">
+            <span class="condition-tag">Foreign Used</span>
+            ${isSuperAdmin ? `
+                <div class="admin-buttons">
+                    <button class="edit-btn" data-id="${car.id}">Edit</button>
+                    <button class="delete-btn" data-id="${car.id}">Delete</button>
+                </div>
+            ` : ''}
+        </div>
+        <div class="car-details">
+            <h3>${car.car_name}</h3>
+            <div class="car-meta">
+                <span>Automatic</span>
+                <span>Kano</span>
+            </div>
+            <span class="car-price">₦${car.price ? car.price.toLocaleString() : 'Price not set'}</span>
+            <div class="card-actions">
+                <a href="#" class="details-btn">View Details</a>
+                <a href="https://wa.me/2348000000000?text=${encodeURIComponent(car.whatsapp_message)}" class="wa-btn" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function attachEventListeners() {
+    // Existing details-btn listeners
+    document.querySelectorAll(".details-btn").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const card = btn.closest(".car-card");
+            const title = card.querySelector("h3").textContent;
+            const price = card.querySelector(".car-price").textContent;
+            const meta = card.querySelector(".car-meta").textContent;
+            const carId = btn.closest(".car-card").dataset.carId;
+            const car = carsData.find(c => c.id == carId);
+            
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalPrice").textContent = price;
+            document.getElementById("modalMeta").textContent = meta;
+            
+            // Setup carousel
+            currentCarouselImages = car.images || [car.car_link_image];
+            currentCarouselImageIndex = 0;
+            document.getElementById("carousel-img").src = currentCarouselImages[0];
+            document.getElementById('current-photo').textContent = '1';
+            document.getElementById('total-photos').textContent = currentCarouselImages.length;
+            // Auto enable fullscreen mode for better viewing
+            document.getElementById("detailsModal").classList.add('fullscreen-mode');
+            
+            document.getElementById("modalWhatsapp").href = "https://wa.me/2348000000000";
+            document.getElementById("detailsModal").classList.add("open");
+        });
+    });
+
+    // Admin buttons
+    if (isSuperAdmin) {
+        document.querySelectorAll('.edit-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.dataset.id;
+                const car = carsData.find(c => c.id == id);
+                document.getElementById('car-name').value = car.car_name;
+                document.getElementById('car-price').value = car.price || '';
+                currentEditingId = id;
+                loadImageInputs(car.images || []);
+                document.getElementById('admin-modal').style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.dataset.id;
+                deleteCar(id);
+            });
+        });
+    }
+}
+
+function loadImageInputs(images) {
+    const container = document.getElementById('image-inputs');
+    container.innerHTML = '';
+    for (let i = 0; i < 5; i++) {
+        const input = document.createElement('input');
+        input.type = 'file';
+        input.accept = 'image/*';
+        input.className = 'image-upload-input';
+        input.dataset.index = i;
+        if (images[i]) {
+            input.dataset.existingImage = images[i];
+        }
+        container.appendChild(input);
+    }
+}
+
+function getUploadedImages() {
+    const inputs = document.querySelectorAll('.image-upload-input');
+    const images = [];
+    let uploadPromises = [];
+    
+    inputs.forEach(input => {
+        if (input.files && input.files[0]) {
+            uploadPromises.push(
+                new Promise((resolve) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        images[input.dataset.index] = e.target.result;
+                        resolve();
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                })
+            );
+        } else if (input.dataset.existingImage) {
+            images[input.dataset.index] = input.dataset.existingImage;
+        }
+    });
+    
+    return { promise: Promise.all(uploadPromises), images };
+}
+
+function saveCar() {
+    const name = document.getElementById('car-name').value;
+    const price = parseInt(document.getElementById('car-price').value) || 0;
+    
+    const imageData = getUploadedImages();
+    imageData.promise.then(() => {
+        const imageArray = imageData.images.filter(img => img); // Remove undefined entries
+        
+        if (currentEditingId) {
+            const car = carsData.find(c => c.id == currentEditingId);
+            car.car_name = name;
+            car.price = price;
+            if (imageArray.length > 0) {
+                car.images = imageArray;
+                car.car_link_image = imageArray[0];
+            }
+            car.whatsapp_message = `Hello, I saw the ${name} for ₦${price.toLocaleString()} on your website. Is it still available?`;
+        } else {
+            const newId = Math.max(...carsData.map(c => c.id)) + 1;
+            const newCar = {
+                id: newId,
+                car_name: name,
+                price: price,
+                images: imageArray.length > 0 ? imageArray : ['https://via.placeholder.com/400'],
+                car_link_image: imageArray.length > 0 ? imageArray[0] : 'https://via.placeholder.com/400',
+                whatsapp_message: `Hello, I saw the ${name} for ₦${price.toLocaleString()} on your website. Is it still available?`
+            };
+            carsData.unshift(newCar);
+        }
+        localStorage.setItem('carsData', JSON.stringify(carsData));
+        renderCarGrid();
+        document.getElementById('admin-modal').style.display = 'none';
+    });
+}
+
+function deleteCar(id) {
+    const index = carsData.findIndex(c => c.id == id);
+    if (index > -1) {
+        carsData.splice(index, 1);
+        localStorage.setItem('carsData', JSON.stringify(carsData));
+        renderCarGrid();
+    }
+}
+
+function nextPhoto() {
+    if (currentCarouselImages.length <= 1) return;
+    currentCarouselImageIndex = (currentCarouselImageIndex + 1) % currentCarouselImages.length;
+    updateCarouselDisplay();
+}
+
+function prevPhoto() {
+    if (currentCarouselImages.length <= 1) return;
+    currentCarouselImageIndex = (currentCarouselImageIndex - 1 + currentCarouselImages.length) % currentCarouselImages.length;
+    updateCarouselDisplay();
+}
+
+function updateCarouselDisplay() {
+    document.getElementById('carousel-img').src = currentCarouselImages[currentCarouselImageIndex];
+    document.getElementById('current-photo').textContent = currentCarouselImageIndex + 1;
+    document.getElementById('total-photos').textContent = currentCarouselImages.length;
+}
+
+function toggleFullscreen() {
+    const modal = document.getElementById('detailsModal');
+    modal.classList.toggle('fullscreen-mode');
+}
+
+function closeModal() {
+    const modal = document.getElementById('detailsModal');
+    modal.classList.remove('open');
+    modal.classList.remove('fullscreen-mode');
+}
+
+// Add admin bar if admin
+if (isSuperAdmin) {
+    console.log('Adding admin bar');
+    const adminBar = document.createElement('div');
+    adminBar.id = 'admin-bar';
+    adminBar.innerHTML = '<button id="add-car-btn">+ Add New Car</button><button id="logout-btn" style="margin-left:10px; background:#666; color:white; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;">Logout</button>';
+    document.body.insertBefore(adminBar, document.body.firstChild);
+    console.log('Admin bar added to DOM');
+} else {
+    console.log('Not super admin, no admin bar');
+}
+
+// On load
+document.addEventListener('DOMContentLoaded', () => {
+    renderCarGrid();
+    // Add event for add-car-btn
+    if (isSuperAdmin) {
+        document.getElementById('add-car-btn').addEventListener('click', () => {
+            document.getElementById('car-name').value = '';
+            document.getElementById('car-price').value = '';
+            currentEditingId = null;
+            loadImageInputs([]);
+            document.getElementById('admin-modal').style.display = 'block';
+        });
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            sessionStorage.removeItem('isSuperAdmin');
+            location.reload();
+        });
+    }
+    // Existing nav toggle
+    document.querySelector(".nav-toggle").addEventListener("click", () => {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("open");
+        console.log('Nav toggle clicked, nav-links classes:', navLinks.className);
+        console.log('Nav links HTML:', navLinks.innerHTML);
+    });
+    // Modal close
+    document.querySelector(".modal-close").addEventListener("click", () => {
+        closeModal();
+    });
+    document.querySelector(".details-modal-backdrop").addEventListener("click", () => {
+        closeModal();
+    });
+    
+    // Keyboard navigation for gallery
+    document.addEventListener('keydown', (e) => {
+        if (document.getElementById("detailsModal").classList.contains('open')) {
+            if (e.key === 'ArrowRight') nextPhoto();
+            if (e.key === 'ArrowLeft') prevPhoto();
+            if (e.key === 'Escape') closeModal();
+        }
+    });
+    // Filter
+    const searchInput = document.getElementById("carSearch");
+    const brandFilter = document.getElementById("brandFilter");
+    const counter = document.getElementById("carCounter");
+    function filterCars() {
+        let searchValue = searchInput.value.toLowerCase();
+        let brandValue = brandFilter.value.toLowerCase();
+        let visibleCount = 0;
+        const cards = document.querySelectorAll(".car-card");
+        cards.forEach(car => {
+            let title = car.querySelector("h3").textContent.toLowerCase();
+            let matchesSearch = title.includes(searchValue);
+            let matchesBrand = brandValue === "all" || title.includes(brandValue);
+            if (matchesSearch && matchesBrand) {
+                car.style.display = "block";
+                visibleCount++;
+            } else {
+                car.style.display = "none";
+            }
+        });
+        counter.textContent = `Showing ${visibleCount} Cars in Kano`;
+    }
+    searchInput.addEventListener("input", filterCars);
+    brandFilter.addEventListener("change", filterCars);
+});
+</script>
+
+</body>
+</html>
